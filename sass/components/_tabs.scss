@@ -1,0 +1,78 @@
+.tabs {
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 23px;
+  @include tablet {
+    flex-direction: row;
+    padding-top: 0;
+  }
+}
+
+.tabs__items {
+  display: flex;
+  margin-top: 5px;
+  @include tablet {
+    margin-top: 0;
+  }
+  @include desktop {
+    margin-right: 208px;
+  }
+}
+.tabs__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 50%;
+  color: var(--second-text-color);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.43;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  @include tablet {
+    margin-right: 15px;
+    font-size: 14px;
+  }
+  @include desktop {
+    margin-right: 0;
+  }
+}
+.tabs__item:not(:last-child) {
+  @include desktop {
+    margin-right: 19px;
+  }
+}
+
+.tabs__table {
+  padding: 20px 0;
+  position: relative;
+  display: none;
+}
+.tabs__table::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+}
+
+// .tabs__table:nth-child(1)::before {
+//   background: var(--accent-color);
+//   left: 0;
+// }
+.tabs__table:nth-child(2)::before {
+  color: var(--accent-color);
+}
+
+.tabs__table {
+  display: none;
+}
+.tabs__table--active {
+  display: block;
+}
+
+.tabs__item--active {
+  color: var(--accent-color);
+}

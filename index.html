@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мастерская</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="http://fonts.cdnfonts.com/css/circe" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body class="body">
+    <!--  ______________* HEADER *_________________ -->
+    <div class="container">
+      <header>
+        <div class="mob-menu">
+          <div class="avatar">
+            <img src="./images/avatar_66.jpg" alt="фото пользователя" />
+            <svg class="avatar__icon" width="20" height="14">
+              <use href="./images/symbol-defs.svg#icon-check_name"></use>
+            </svg>
+          </div>
+          <div class="mob-menu__text">
+            <p>Сообщения</p>
+            <span>3</span>
+          </div>
+
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item">
+              <a href="#" class="link mob-menu__link">Профиль</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="link mob-menu__link">Настройки</a>
+            </li>
+          </ul>
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item">
+              <a href="#" class="link mob-menu__link">Вопросы</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="#" class="link mob-menu__link">Написать модератору</a>
+            </li>
+          </ul>
+          <!-- <div class="mob-menu__btn-thumb"> -->
+          <button type="button" class="mob-menu__btn-buy">
+            Купить подписку
+          </button>
+          <!-- </div> -->
+        </div>
+      </header>
+      <main>
+        <div class="header-table">
+          <button type="button" class="menu-open-btn">
+            <svg class="menu-open_icon" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-menu_40px"></use>
+            </svg>
+          </button>
+          <div class="header-table__container">
+            <button type="button" class="header-table__btn">
+              <span class="btn-text">Удалить</span>
+              <svg class="header-table__icon" width="15" height="15">
+                <use href="./images/symbol-defs.svg#icon-bin2"></use>
+              </svg>
+            </button>
+            <button type="button" class="header-table__btn">
+              <span class="btn-text">Добавить в архив</span>
+              <svg class="header-table__icon" width="15" height="15">
+                <use href="./images/symbol-defs.svg#icon-drawer"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="tabs">
+            <nav class="tabs__items">
+              <a href="#tab_01" class="link tabs__item tabs__item--active"
+                >Непрочитанные</a
+              >
+              <a href="#tab_02" class="link tabs__item tabs__item-archive"
+                >Архив</a
+              >
+            </nav>
+            <div class="search">
+              <form class="search__form">
+                <input
+                  type="text"
+                  placeholder="Искать → "
+                  class="search__input"
+                />
+                <button type="submit" class="search__btn"></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- ___________________* TABLE *__________________ -->
+
+        <div class="tabs__body">
+          <section id="tab_01" class="tabs__table tabs__table--active">
+            <h2 class="tabs__title">Непрочитанные</h2>
+            <table class="tabs__unread">
+              <tbody>
+                <tr class="tabs__message">
+                  <td>
+                    <label class="tabs__check">
+                      <input
+                        class="tabs__checkbox visually-hidden"
+                        type="checkbox"
+                        name="checkbox"
+                      />
+                      <span class="tabs__icon-check"></span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="tabs__svg-active">
+                      <svg class="person-icon" width="12" height="12">
+                        <use
+                          href="./images/symbol-defs.svg#icon-profile_1"
+                        ></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#" class="tabs__persone-name">Александр Анто…</a>
+                  </td>
+                  <td>
+                    <svg
+                      class="tabs__icon tabs__icon--active"
+                      width="12"
+                      height="12"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-shopping_cart"
+                      ></use>
+                    </svg>
+                  </td>
+                  <td>
+                    <p class="tabs__text">
+                      здраствуйте. как долго прийдется ждать нож кото
+                    </p>
+                  </td>
+                  <td class="tabs__data-time">
+                    <div class="tabs__time--mob">13 апр</div>
+                    <div class="tabs__time">
+                      13/04/2018 <span class="tabs__time--span">14:02</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tabs__message">
+                  <td>
+                    <label class="tabs__check"
+                      ><input
+                        class="tabs__checkbox visually-hidden"
+                        type="checkbox"
+                        name="checkbox" />
+                      <span class="tabs__icon-check"></span
+                    ></label>
+                  </td>
+                  <td>
+                    <div class="tabs__svg-active">
+                      <svg class="person-icon" width="12" height="12">
+                        <use
+                          href="./images/symbol-defs.svg#icon-profile_1"
+                        ></use>
+                      </svg>
+                      <svg class="person-icon__active" width="10" height="10">
+                        <use
+                          href="./images/symbol-defs.svg#icon-active_point"
+                        ></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#" class="tabs__persone-name">Gun Machine</a>
+                  </td>
+                  <td>
+                    <svg class="tabs__icon" width="12" height="12">
+                      <use
+                        href="./images/symbol-defs.svg#icon-shopping_cart"
+                      ></use>
+                    </svg>
+                  </td>
+                  <td>
+                    <p class="tabs__text">
+                      а почему на ноже нет ни одной царапины?
+                    </p>
+                  </td>
+                  <td class="tabs__data-time">
+                    <div class="tabs__time--mob">1 дек</div>
+                    <div class="tabs__time">
+                      01/12/2018 <span class="tabs__time--span">00:14</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tabs__message">
+                  <td>
+                    <label class="tabs__check"
+                      ><input
+                        class="tabs__checkbox visually-hidden"
+                        type="checkbox"
+                        name="checkbox" />
+                      <span class="tabs__icon-check"></span
+                    ></label>
+                  </td>
+                  <td>
+                    <div class="tabs__svg-active">
+                      <svg class="person-icon" width="12" height="12">
+                        <use
+                          href="./images/symbol-defs.svg#icon-profile_1"
+                        ></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#" class="tabs__persone-name">Диана Павлова</a>
+                  </td>
+                  <td>
+                    <svg class="tabs__icon" width="12" height="12">
+                      <use
+                        href="./images/symbol-defs.svg#icon-shopping_cart"
+                      ></use>
+                    </svg>
+                  </td>
+                  <td>
+                    <p class="tabs__text">
+                      нет, мне не нужно. если и вам тоже пофиг, то выб
+                    </p>
+                  </td>
+                  <td class="tabs__data-time">
+                    <div class="tabs__time--mob">13 апр</div>
+                    <div class="tabs__time">
+                      13/04/2018 <span class="tabs__time--span">14:02</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tabs__message">
+                  <td>
+                    <label class="tabs__check"
+                      ><input
+                        class="tabs__checkbox visually-hidden"
+                        type="checkbox"
+                        name="checkbox" />
+                      <span class="tabs__icon-check"></span
+                    ></label>
+                  </td>
+                  <td>
+                    <div class="tabs__svg-active">
+                      <svg class="person-icon" width="12" height="12">
+                        <use
+                          href="./images/symbol-defs.svg#icon-profile_1"
+                        ></use>
+                      </svg>
+                      <svg class="person-icon__active" width="10" height="10">
+                        <use
+                          href="./images/symbol-defs.svg#icon-active_point"
+                        ></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td><a href="#" class="tabs__persone-name">Otto Zweig</a></td>
+                  <td>
+                    <svg class="tabs__icon" width="12" height="12">
+                      <use
+                        href="./images/symbol-defs.svg#icon-shopping_cart"
+                      ></use>
+                    </svg>
+                  </td>
+                  <td><p class="tabs__text">thank you! that’s great!</p></td>
+                  <td>
+                    <div class="tabs__time--mob">1 дек</div>
+                    <div class="tabs__time">
+                      01/12/2018 <span class="tabs__time--span">00:14</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tabs__message">
+                  <td>
+                    <label class="tabs__check"
+                      ><input
+                        class="tabs__checkbox visually-hidden"
+                        type="checkbox"
+                        name="checkbox" />
+                      <span class="tabs__icon-check"></span
+                    ></label>
+                  </td>
+                  <td>
+                    <div class="tabs__svg-active">
+                      <svg class="person-icon" width="12" height="12">
+                        <use
+                          href="./images/symbol-defs.svg#icon-profile_1"
+                        ></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#" class="tabs__persone-name">Александр Анто…</a>
+                  </td>
+                  <td>
+                    <svg class="tabs__icon tabs__icon--active">
+                      <use
+                        href="./images/symbol-defs.svg#icon-shopping_cart"
+                      ></use>
+                    </svg>
+                  </td>
+                  <td>
+                    <p class="tabs__text">
+                      здраствуйте. как долго прийдется ждать нож кото
+                    </p>
+                  </td>
+                  <td class="tabs__data-time">
+                    <div class="tabs__time--mob">13 апр</div>
+                    <div class="tabs__time">
+                      13/04/2018 <span class="tabs__time--span">14:02</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tabs__message">
+                  <td>
+                    <label class="tabs__check"
+                      ><input
+                        class="tabs__checkbox visually-hidden"
+                        type="checkbox"
+                        name="checkbox" />
+                      <span class="tabs__icon-check"></span
+                    ></label>
+                  </td>
+                  <td>
+                    <div class="tabs__svg-active">
+                      <svg class="person-icon" width="12" height="12">
+                        <use
+                          href="./images/symbol-defs.svg#icon-profile_1"
+                        ></use>
+                      </svg>
+                      <svg class="person-icon__active" width="10" height="10">
+                        <use
+                          href="./images/symbol-defs.svg#icon-active_point"
+                        ></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#" class="tabs__persone-name">Gun Machine</a>
+                  </td>
+                  <td>
+                    <svg class="tabs__icon" width="12" height="12">
+                      <use
+                        href="./images/symbol-defs.svg#icon-shopping_cart"
+                      ></use>
+                    </svg>
+                  </td>
+                  <td>
+                    <p class="tabs__text tabs__text--active">
+                      а почему на ноже нет ни одной царапины?
+                    </p>
+                  </td>
+                  <td class="tabs__data-time">
+                    <div class="tabs__time--mob tabs__data-time--color">
+                      1 дек
+                    </div>
+                    <div class="tabs__time tabs__data-time--color">
+                      01/12/2018 <span class="tabs__time--span">00:14</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tabs__message">
+                  <td>
+                    <label class="tabs__check"
+                      ><input
+                        class="tabs__checkbox visually-hidden"
+                        type="checkbox"
+                        name="checkbox" />
+                      <span class="tabs__icon-check"></span
+                    ></label>
+                  </td>
+                  <td>
+                    <div class="tabs__svg-active">
+                      <svg class="person-icon" width="12" height="12">
+                        <use
+                          href="./images/symbol-defs.svg#icon-profile_1"
+                        ></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#" class="tabs__persone-name">Диана Павлова</a>
+                  </td>
+                  <td>
+                    <svg class="tabs__icon" width="12" height="12">
+                      <use
+                        href="./images/symbol-defs.svg#icon-shopping_cart"
+                      ></use>
+                    </svg>
+                  </td>
+                  <td>
+                    <p class="tabs__text">
+                      нет, мне не нужно. если и вам тоже пофиг, то выб
+                    </p>
+                  </td>
+                  <td class="tabs__data-time">
+                    <div class="tabs__time--mob">13 апр</div>
+                    <div class="tabs__time">
+                      13/04/2018 <span class="tabs__time--span">14:02</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tabs__message">
+                  <td>
+                    <label class="tabs__check"
+                      ><input
+                        class="tabs__checkbox visually-hidden"
+                        type="checkbox"
+                        name="checkbox" />
+                      <span class="tabs__icon-check"></span
+                    ></label>
+                  </td>
+                  <td>
+                    <div class="tabs__svg-active">
+                      <svg class="person-icon" width="12" height="12">
+                        <use
+                          href="./images/symbol-defs.svg#icon-profile_1"
+                        ></use>
+                      </svg>
+                      <svg class="person-icon__active" width="10" height="10">
+                        <use
+                          href="./images/symbol-defs.svg#icon-active_point"
+                        ></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td><a href="#" class="tabs__persone-name">Otto Zweig</a></td>
+                  <td>
+                    <svg class="tabs__icon" width="12" height="12">
+                      <use
+                        href="./images/symbol-defs.svg#icon-shopping_cart"
+                      ></use>
+                    </svg>
+                  </td>
+                  <td>
+                    <p class="tabs__text tabs__text--active">
+                      thank you! that’s great!
+                    </p>
+                  </td>
+                  <td class="tabs__data-time">
+                    <div class="tabs__time--mob tabs__data-time--color">
+                      1 дек
+                    </div>
+                    <div class="tabs__time tabs__data-time--color">
+                      01/12/2018 <span class="tabs__time--span">00:14</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- __________* PAGINATION *______________ -->
+
+            <div class="pagination">
+              <nav class="pagination-nav" aria-label="Page navigation">
+                <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a
+                      class="pagination__number pagination__number--active link"
+                      href="#"
+                      >2</a
+                    >
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">4</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">5</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">6</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">7</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">8</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__dots--disable link">...</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">10</a>
+                  </li>
+                  <li class="pagination__item pagination__dots">
+                    <a href="#" class="pagination__dots--visible link">...</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__number link">123</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__btn link">
+                      <svg class="pagination__icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-right_arrow"
+                        ></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+          <section id="tab_02" class="tabs__table">
+            <div class="tabs-archive">
+              <h2 class="tabs__title">Архив</h2>
+              <svg class="tabs-archive__icon" width="40" height="40">
+                <use href="./images/symbol-defs.svg#icon-spinner"></use>
+              </svg>
+              <h2>Нет сообщений в архиве</h2>
+              <p>Когда вы архивируете сообщения, они отображаются здесь.</p>
+            </div>
+          </section>
+        </div>
+        <!-- __________________* MOBILE MENU *________________ -->
+        <div class="wrap-mobile">
+          <div class="mob-menu is-hidden" data-mob="mob-menu">
+            <button type="button" class="menu-close-btn">&#215;</button>
+            <div class="avatar">
+              <img
+                src="./images/avatar_66.jpg"
+                alt="фото пользователя"
+                width="220"
+                height="292"
+              />
+              <svg class="avatar__icon" width="20" height="14">
+                <use href="./images/symbol-defs.svg#icon-check_name"></use>
+              </svg>
+            </div>
+            <div class="mob-menu__text">
+              <p>Сообщения</p>
+              <span>3</span>
+            </div>
+
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a href="#" class="link mob-menu__link">Профиль</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="#" class="link mob-menu__link">Настройки</a>
+              </li>
+            </ul>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a href="#" class="link mob-menu__link">Вопросы</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="#" class="link mob-menu__link">Написать модератору</a>
+              </li>
+            </ul>
+            <!-- <div class="mob-menu__btn-thumb"> -->
+            <button type="button" class="mob-menu__btn-buy">
+              Купить подписку
+            </button>
+            <!-- </div> -->
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!--  FOOTER  -->
+
+    <script type="module" src="./js/menu.js"></script>
+    <script type="module" src="./js/active.js"></script>
+    <script type="module" src="./js/checkbox.js"></script>
+  </body>
+</html>

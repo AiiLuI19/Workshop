@@ -1,0 +1,136 @@
+.pagination {
+  @include desktop {
+    width: 460px;
+    margin-left: auto;
+  }
+}
+.pagination-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+.pagination__list {
+  display: flex;
+  font-size: 10px;
+  @include desktop {
+    // width: 460px;
+  }
+}
+.pagination__item {
+  display: flex;
+  align-items: center;
+  &:last-child {
+    width: 20px;
+    margin-left: 5px;
+
+    @include tablet {
+      width: 30px;
+    }
+    @include desktop {
+      width: 51px;
+    }
+  }
+
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+.pagination__number {
+  width: 20px;
+  height: 20px;
+
+  color: var(--primary-tex-color);
+
+  padding: 20% 30%;
+  @include tablet {
+    width: 25px;
+    height: 24px;
+    padding: 8% 30%;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.57;
+    text-align: center;
+  }
+  @include desktop {
+    width: 9px;
+  }
+}
+.pagination__number:hover,
+.pagination__number:focus,
+.pagination__dots--visible:hover,
+.pagination__dots--visible:focus {
+  color: var(--accent-color);
+}
+.pagination__number--active {
+  color: var(--accent-color);
+  border-radius: 50%;
+
+  border: 1px solid var(--accent-color);
+  @include desktop {
+    width: 25px;
+  }
+}
+
+.pagination__dots--disable {
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  @include tablet {
+    width: 25px;
+    height: 24px;
+  }
+}
+.pagination__dots--visible {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--primary-tex-color);
+  @include tablet {
+    width: 25px;
+    height: 24px;
+  }
+}
+.pagination__list > .pagination__dots {
+  margin-right: 0;
+
+  @include desktop {
+    margin-right: 10px;
+  }
+}
+.pagination__btn {
+  color: var(--primary-tex-color);
+  @include tablet {
+    width: 30px;
+    height: 16px;
+    // font-size: 14px;
+    font-weight: 700;
+    line-height: 1.38;
+  }
+  @include desktop {
+    width: 51px;
+  }
+}
+.pagination__icon {
+  width: 20px;
+  height: 20px;
+  // padding-bottom: 7px;
+
+  fill: var(--primary-tex-color);
+  @include tablet {
+    width: 30px;
+    height: 16px;
+  }
+  @include desktop {
+    padding-bottom: 0;
+    width: 51px;
+  }
+}
+.pagination__icon:hover,
+.pagination__icon:focus {
+  fill: var(--accent-color);
+}
